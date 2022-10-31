@@ -17,6 +17,7 @@ int main()
     while(opcion != 7) {
         menu();        
         scanf("%d", &opcion);
+        system("clear");
         
         switch(opcion) {
             case 1:
@@ -29,89 +30,79 @@ int main()
                 fflush(stdin);
                 printf("Membresia (1/0): ");
                 scanf("%d", &nodo.p.membresia);
-                getchar();
-                
                 
                 enqueue(&front, &tail, nodo);
                 printf("\nCola de pedidos (producto, cliente, membresia): \n");
                 print_queue(&front, &tail);
                 
-                printf("\nPresione cualquier tecla para volver al menu");
+                printf("\n\nPresione cualquier tecla para volver al menu\n");
+                while(getchar()!='\n');
                 getchar();
                 system("clear");
-                
                 break;
             
             case 2:
-                // Verificar si la cola esta vacia
-                if(queue_isempty(&front, &tail));
-                    break;
-
+                fflush(stdin);
                 nodo = dequeue(&front, &tail);
                 printf("\nPedido procesado (producto, cliente, membresia): \n");
                 printf("%s, ", nodo.p.producto);
                 printf("%s, ", nodo.p.nombre);
                 printf("%d\n\n", nodo.p.membresia);
+                
+                printf("\nCola actual: \n");
                 print_queue(&front, &tail);
                 
-                printf("\nPresione cualquier tecla para volver al menu");
+                printf("\n\nPresione cualquier tecla para volver al menu\n");
+                while(getchar()!='\n');
                 getchar();
                 system("clear");
-                
                 break;
                 
             case 3:
                 printf("\nCola actual: \n");
                 print_queue(&front, &tail);
                 
-                printf("\nPresione cualquier tecla para volver al menu");
+                printf("\n\nPresione cualquier tecla para volver al menu\n");
+                while(getchar()!='\n');
                 getchar();
                 system("clear");
-                
                 break;
 
             case 4:
-                // Verificar si la cola esta vacia
-                if(queue_isempty(&front, &tail));
-                    break;
-
+                fflush(stdin);
                 nodo = peek(&front, &tail);
-                printf("\nPrimer pedido en cola: \n");
-                printf("%s\n", nodo.p.producto);
-                printf("%s\n", nodo.p.nombre);
+                printf("\nPrimer pedido en cola (producto, cliente, membresia): \n");
+                printf("%s, ", nodo.p.producto);
+                printf("%s, ", nodo.p.nombre);
                 printf("%d\n\n", nodo.p.membresia);
                 
-                printf("\nPresione cualquier tecla para volver al menu");
+                printf("\n\nPresione cualquier tecla para volver al menu\n");
+                while(getchar()!='\n');
                 getchar();
                 system("clear");
-                
                 break;
 
             case 5:
-                // Verificar si la cola esta vacia
-                if(queue_isempty(&front, &tail));
-                    break;
-
                 nodo = rear(&front, &tail);
-                printf("\nUltimo pedido en cola: \n");
-                printf("%s\n", nodo.p.producto);
-                printf("%s\n", nodo.p.nombre);
+                printf("\nUltimo pedido en cola (producto, cliente, membresia): \n");
+                printf("%s, ", nodo.p.producto);
+                printf("%s, ", nodo.p.nombre);
                 printf("%d\n\n", nodo.p.membresia);
                 
-                printf("\nPresione cualquier tecla para volver al menu");
+                printf("\n\nPresione cualquier tecla para volver al menu\n");
+                while(getchar()!='\n');
                 getchar();
                 system("clear");
-                
                 break;
 
             case 6:
                 printf("\nNumero de pedidos: ");
                 printf("%d", queue_size(&front, &tail));
                 
-                printf("\nPresione cualquier tecla para volver al menu");
+                printf("\n\nPresione cualquier tecla para volver al menu\n");
+                while(getchar()!='\n');
                 getchar();
                 system("clear");
-                
                 break;
 
             case 7:
