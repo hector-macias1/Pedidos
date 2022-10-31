@@ -11,7 +11,8 @@ int main()
     struct NODE *tail = NULL;
     struct NODE nodo;
     int opcion = 0;
-    //int limit;
+
+    printf("****Sistema de pedidos****\n");
     
     while(opcion != 7) {
         menu();        
@@ -20,10 +21,10 @@ int main()
         switch(opcion) {
             case 1:
                 fflush(stdin);
-                printf("\nIngrese producto: ");
+                printf("\nNombre del producto: ");
                 scanf("%s", nodo.p.producto);
                 fflush(stdin);
-                printf("Ingrese nombre: ");
+                printf("Nombre del cliente: ");
                 scanf("%s", nodo.p.nombre);
                 fflush(stdin);
                 printf("Membresia (1/0): ");
@@ -32,37 +33,37 @@ int main()
                 
                 
                 enqueue(&front, &tail, nodo);
-                printf("\nCola de pedidos: \n");
+                printf("\nCola de pedidos (producto, cliente, membresia): \n");
                 print_queue(&front, &tail);
-
+                
                 printf("\nPresione cualquier tecla para volver al menu");
                 getchar();
                 system("clear");
-
+                
                 break;
             
             case 2:
                 nodo = dequeue(&front, &tail);
-                printf("\nPedido culminado: \n");
-                printf("%s\n", nodo.p.producto);
-                printf("%s\n", nodo.p.nombre);
+                printf("\nPedido procesado (producto, cliente, membresia): \n");
+                printf("%s, ", nodo.p.producto);
+                printf("%s, ", nodo.p.nombre);
                 printf("%d\n\n", nodo.p.membresia);
                 print_queue(&front, &tail);
-
+                
                 printf("\nPresione cualquier tecla para volver al menu");
                 getchar();
                 system("clear");
-
+                
                 break;
                 
             case 3:
                 printf("\nCola actual: \n");
                 print_queue(&front, &tail);
-
+                
                 printf("\nPresione cualquier tecla para volver al menu");
                 getchar();
                 system("clear");
-
+                
                 break;
 
             case 4:
@@ -71,11 +72,11 @@ int main()
                 printf("%s\n", nodo.p.producto);
                 printf("%s\n", nodo.p.nombre);
                 printf("%d\n\n", nodo.p.membresia);
-
+                
                 printf("\nPresione cualquier tecla para volver al menu");
                 getchar();
                 system("clear");
-
+                
                 break;
 
             case 5:
@@ -84,24 +85,28 @@ int main()
                 printf("%s\n", nodo.p.producto);
                 printf("%s\n", nodo.p.nombre);
                 printf("%d\n\n", nodo.p.membresia);
-
-                printf("\nPresione cualquier tecla para volver al menu");
-                getchar();
-                system("clear");
-
-                break;
-
-            case 6:
-                printf("\nNumero de pedidos: ");
-                printf("%d", queue_size(&front, &tail));
-
+                
                 printf("\nPresione cualquier tecla para volver al menu");
                 getchar();
                 system("clear");
                 
                 break;
+
+            case 6:
+                printf("\nNumero de pedidos: ");
+                printf("%d", queue_size(&front, &tail));
+                
+                printf("\nPresione cualquier tecla para volver al menu");
+                getchar();
+                system("clear");
+                
+                break;
+
+            case 7:
+                break;
             
             default:
+                printf("Opcion inexistente\n");
                 break;
         }
     }
@@ -110,12 +115,12 @@ int main()
 
 void menu()
 {
-    printf("\nSeleccione una opcion\n");
-    printf("1. enqueue\n");
-    printf("2. dequeue\n");
-    printf("3. print queue\n");
-    printf("4. peek\n");
-    printf("5. rear\n");
-    printf("6. queue size\n");
-    printf("7. Exit\n");
+    printf("\nSeleccione una opcion:\n");
+    printf("1. Registrar un pedido.\n");
+    printf("2. Procesar un pedido.\n");
+    printf("3. Desplegar cola de pedidos.\n");
+    printf("4. Primer pedido en cola.\n");
+    printf("5. Ultimo pedido en cola.\n");
+    printf("6. Numero de pedidos.\n");
+    printf("7. Salir\n");
 }

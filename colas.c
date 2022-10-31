@@ -23,7 +23,7 @@ void enqueue(struct NODE **front, struct NODE **tail, struct NODE nodo)
     // Crear nuevo nodo
     struct NODE *newNode = (struct NODE*) malloc(sizeof(struct NODE));
     
-    // Nodo auxiliar
+    // Nodos auxiliares
     struct NODE *temp;
     
     // Verificar si hay memoria disponible
@@ -55,7 +55,7 @@ void enqueue(struct NODE **front, struct NODE **tail, struct NODE nodo)
     }
     
     //Verificar la prioridad del nodo
-    if(nodo.p.membresia == 1) {        
+    if(nodo.p.membresia == 1) {
         temp = *front;
         while(temp->next != NULL && temp->next->p.membresia != 0) {
             temp = temp->next;
