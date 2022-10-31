@@ -34,6 +34,11 @@ int main()
                 enqueue(&front, &tail, nodo);
                 printf("\nCola de pedidos: \n");
                 print_queue(&front, &tail);
+
+                printf("\nPresione cualquier tecla para volver al menu");
+                getchar();
+                system("clear");
+
                 break;
             
             case 2:
@@ -43,11 +48,21 @@ int main()
                 printf("%s\n", nodo.p.nombre);
                 printf("%d\n\n", nodo.p.membresia);
                 print_queue(&front, &tail);
+
+                printf("\nPresione cualquier tecla para volver al menu");
+                getchar();
+                system("clear");
+
                 break;
                 
             case 3:
                 printf("\nCola actual: \n");
                 print_queue(&front, &tail);
+
+                printf("\nPresione cualquier tecla para volver al menu");
+                getchar();
+                system("clear");
+
                 break;
 
             case 4:
@@ -56,6 +71,11 @@ int main()
                 printf("%s\n", nodo.p.producto);
                 printf("%s\n", nodo.p.nombre);
                 printf("%d\n\n", nodo.p.membresia);
+
+                printf("\nPresione cualquier tecla para volver al menu");
+                getchar();
+                system("clear");
+
                 break;
 
             case 5:
@@ -64,11 +84,21 @@ int main()
                 printf("%s\n", nodo.p.producto);
                 printf("%s\n", nodo.p.nombre);
                 printf("%d\n\n", nodo.p.membresia);
+
+                printf("\nPresione cualquier tecla para volver al menu");
+                getchar();
+                system("clear");
+
                 break;
 
             case 6:
                 printf("\nNumero de pedidos: ");
                 printf("%d", queue_size(&front, &tail));
+
+                printf("\nPresione cualquier tecla para volver al menu");
+                getchar();
+                system("clear");
+                
                 break;
             
             default:
