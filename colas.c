@@ -113,30 +113,6 @@ int queue_isempty(struct NODE **front, struct NODE **tail)
     return 0;
 }
 
-int queue_isfull(struct NODE **front, struct NODE **tail, int limit)
-{
-    // Variables locales
-    int count = 0;
-    struct NODE *temp = *front;
-
-    // Verificar si la cola esta vacia
-    if(queue_isempty(front, tail))
-        return 0;
-
-    // Recorrer cola y contar
-    while(temp) {
-        temp = temp->next;
-        count++;
-    }
-
-    // Verificar si la lista esta llena
-    if(count >= limit) {
-        printf("\nQueue is full\n");
-        return 1;
-    }
-    return 0;
-}
-
 int queue_size(struct NODE **front, struct NODE **tail)
 {
     // Variables locales
@@ -182,6 +158,7 @@ struct NODE rear(struct NODE **front, struct NODE **tail)
 
 void print_queue(struct NODE **front, struct NODE **tail)
 {
+    int i = 0;
     struct NODE *temp = *front;
 
     // Verificar si la cola esta vacia
@@ -190,9 +167,11 @@ void print_queue(struct NODE **front, struct NODE **tail)
     
     // Imprimir lista
     while(temp) {
+        i++;
         fflush(stdin);
-        printf("%s, ", temp->p.producto);
-        printf("%s\n", temp->p.nombre);
+        printf("\nPedido %d: %s, ", i, temp->p.producto);
+        printf("%s, ", temp->p.nombre);
+        printf("%d", temp->p.membresia);
         temp = temp->next;
     }
     printf("\n\n");
