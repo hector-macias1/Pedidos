@@ -17,13 +17,13 @@ struct NODE
 };
 
 // Prototipos
-void enqueue(struct NODE **front, struct NODE **rear, struct NODE nodo);
-struct NODE dequeue(struct NODE **front, struct NODE **rear);
-int queue_isempty(struct NODE **front, struct NODE **rear);
-int queue_isfull(struct NODE **front, struct NODE **rear, int limit);
-int queue_size(struct NODE **front, struct NODE **rear);
-struct NODE peek(struct NODE **front, struct NODE **rear);
-struct NODE rear(struct NODE **front, struct NODE **rear);
-void print_queue(struct NODE **front, struct NODE **rear);
+void enqueue(struct NODE **front, struct NODE **tail, struct NODE nodo);
+struct NODE dequeue(struct NODE **front, struct NODE **tail);
+int queue_isempty(struct NODE **front, struct NODE **tail);
+int queue_isfull(struct NODE **front, struct NODE **tail, int limit);
+int queue_size(struct NODE **front, struct NODE **tail);
+struct NODE peek(struct NODE **front, struct NODE **tail);
+struct NODE rear(struct NODE **front, struct NODE **tail);
+void print_queue(struct NODE **front, struct NODE **tail);
 
 #endif
