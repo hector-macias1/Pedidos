@@ -43,6 +43,10 @@ int main()
                 break;
             
             case 2:
+                // Verificar si la cola esta vacia
+                if(queue_isempty(&front, &tail));
+                    break;
+
                 nodo = dequeue(&front, &tail);
                 printf("\nPedido procesado (producto, cliente, membresia): \n");
                 printf("%s, ", nodo.p.producto);
@@ -67,6 +71,10 @@ int main()
                 break;
 
             case 4:
+                // Verificar si la cola esta vacia
+                if(queue_isempty(&front, &tail));
+                    break;
+
                 nodo = peek(&front, &tail);
                 printf("\nPrimer pedido en cola: \n");
                 printf("%s\n", nodo.p.producto);
@@ -80,6 +88,10 @@ int main()
                 break;
 
             case 5:
+                // Verificar si la cola esta vacia
+                if(queue_isempty(&front, &tail));
+                    break;
+
                 nodo = rear(&front, &tail);
                 printf("\nUltimo pedido en cola: \n");
                 printf("%s\n", nodo.p.producto);
@@ -110,6 +122,7 @@ int main()
                 break;
         }
     }
+    system("pause");
     return 0;
 }
 
