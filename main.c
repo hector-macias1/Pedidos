@@ -22,10 +22,10 @@ int main()
             case 1:
                 fflush(stdin);
                 printf("\nNombre del producto: ");
-                scanf("%s", nodo.p.producto);
+                scanf(" %[^\n]s", nodo.p.producto);
                 fflush(stdin);
                 printf("Nombre del cliente: ");
-                scanf("%s", nodo.p.nombre);
+                scanf(" %[^\n]s", nodo.p.nombre);
                 fflush(stdin);
                 printf("Membresia (1/0): ");
                 scanf("%d", &nodo.p.membresia);
