@@ -17,7 +17,7 @@ int main()
     while(opcion != 7) {
         menu();        
         scanf("%d", &opcion);
-        system("clear");
+        system("cls");
         
         switch(opcion) {
             case 1:
@@ -38,7 +38,7 @@ int main()
                 printf("\n\nPresione cualquier tecla para volver al menu\n");
                 while(getchar()!='\n');
                 getchar();
-                system("clear");
+                system("cls");
                 break;
             
             case 2:
@@ -55,7 +55,7 @@ int main()
                 printf("\n\nPresione cualquier tecla para volver al menu\n");
                 while(getchar()!='\n');
                 getchar();
-                system("clear");
+                system("cls");
                 break;
                 
             case 3:
@@ -65,7 +65,7 @@ int main()
                 printf("\n\nPresione cualquier tecla para volver al menu\n");
                 while(getchar()!='\n');
                 getchar();
-                system("clear");
+                system("cls");
                 break;
 
             case 4:
@@ -79,7 +79,7 @@ int main()
                 printf("\n\nPresione cualquier tecla para volver al menu\n");
                 while(getchar()!='\n');
                 getchar();
-                system("clear");
+                system("cls");
                 break;
 
             case 5:
@@ -92,7 +92,7 @@ int main()
                 printf("\n\nPresione cualquier tecla para volver al menu\n");
                 while(getchar()!='\n');
                 getchar();
-                system("clear");
+                system("cls");
                 break;
 
             case 6:
@@ -102,7 +102,7 @@ int main()
                 printf("\n\nPresione cualquier tecla para volver al menu\n");
                 while(getchar()!='\n');
                 getchar();
-                system("clear");
+                system("cls");
                 break;
 
             case 7:
