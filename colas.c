@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Estructura de un pedido
+// Pedido
 struct pedido
 {
     char nombre[50];
@@ -10,14 +10,13 @@ struct pedido
     int membresia;
 };
 
-// Estructura de un nodo
+// Nodo
 struct NODE
 {
     struct pedido p;
     struct NODE *next;
 };
 
-// Funciones
 void enqueue(struct NODE **front, struct NODE **tail, struct NODE nodo)
 {
     // Crear nuevo nodo
